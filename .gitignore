@@ -5,12 +5,12 @@
 !README.md
 !requirements.txt
 
-!analysis_notebooks/
-!analysis_notebooks/**
+!analysis_scripts/
+!analysis_scripts/**
 
 !behavioral_logs/
-!behavioral_logs/examples/
-!behavioral_logs/examples/**
+!behavioral_logs/anonymized/
+!behavioral_logs/anonymized/**
 
 !experiment_ui/
 !experiment_ui/**
@@ -23,16 +23,20 @@ experiment_ui/dataset/**
 !manuscript_figures/
 !manuscript_figures/**
 
+!scripts/
+!scripts/**
+
+!stimuli_release/
+!stimuli_release/**
+
 !stimulus_generation/
 !stimulus_generation/**
-
-!supplementary_analysis/
-!supplementary_analysis/robustness/
-!supplementary_analysis/robustness/run_comment6_checks.py
 
 # Keep generated artifacts out even when they are created below allowed trees.
 **/__pycache__/
 **/*.py[cod]
 **/.ipynb_checkpoints/
-supplementary_analysis/**/outputs/
-supplementary_analysis/**/outputs/**
+analysis_outputs/
+analysis_outputs/**
+private_raw_logs/
+private_raw_logs/**

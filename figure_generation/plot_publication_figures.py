@@ -5,6 +5,7 @@ master trial table. It does not fit models or write statistical/data outputs.
 """
 
 import math
+import os
 import warnings
 from pathlib import Path
 
@@ -20,12 +21,12 @@ import pandas as pd
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ANALYSIS_DIR = ROOT / "analysis_out"
+ANALYSIS_DIR = Path(os.environ.get("DYG_ANALYSIS_DIR", ROOT / "analysis_outputs"))
 CH51 = ANALYSIS_DIR / "ch5_1"
 CH52 = ANALYSIS_DIR / "ch5_2"
 CH53 = ANALYSIS_DIR / "ch5_3"
 CH54 = ANALYSIS_DIR / "ch5_4"
-MANUSCRIPT_DIR = ROOT / "manuscript_figures"
+MANUSCRIPT_DIR = Path(os.environ.get("DYG_FIGURE_DIR", ROOT / "manuscript_figures"))
 
 EVENT_ORDER = ["Continue", "SizeChange", "Merge", "Split"]
 EVENT_COLORS = {
